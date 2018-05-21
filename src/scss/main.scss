@@ -1,8 +1,6 @@
 //переменные: цвета
 $white: #fff;
-
-//mixin
-@import 'mixins/mixin.scss';
+$grey: rgba(#000, .7);
 
 //block
 @import 'all/adjustment.scss';

@@ -11,27 +11,32 @@
   height: 100%;
 }
 
+// в "width: calc(100% / 4);" 4 - это количество слайдов
 .content__item{
+  position: relative;
   width: calc(100% / 4);
+  
   transition: width 1s;
-  overflow-y: hidden;
-  border: 1px solid red;
-
-    // &--1{
-    //   background: url('../img/block/content/img1.jpg') center center no-repeat;
-    //   background-size: cover;
-    // }
-    // &--2{
-    //   background: url('../img/block/content/img2.jpg') center center no-repeat;
-    //   background-size: cover;
-    // }
-    // &--3{
-    //   background: url('../img/block/content/img3.jpg') left center no-repeat;
-    //   background-size: cover
-    // }
+  overflow: hidden;
     &:hover{
-      width: calc(100% / 2);
+      width: 60%;
+      .content__description{
+        left: 5%;
+      }
     }
+    &--1{
+      background: url('../img/block/content/img1.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--2{
+      background: url('../img/block/content/img2.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--3{
+      background: url('../img/block/content/img3.jpg') center center no-repeat;
+      background-size: cover;
+    }
+
 }
 
 .content__logo{
@@ -42,7 +47,21 @@
   background-size: contain;
 }
 
-.content__img{
-  width: auto;
-  height: 100%;
+.content__description{
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: 150%;
+  transition: left 1s;
+  width: 95%;
+  height: 30%;
+  padding: 10px;
+  background-color: $grey;
+  color: $white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.content__caption{
+  font-weight: bold;
 }

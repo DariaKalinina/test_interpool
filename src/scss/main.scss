@@ -1,0 +1,9 @@
+//переменные: цвета
+$white: #fff;
+
+//mixin
+@import 'mixins/mixin.scss';
+
+//block
+@import 'block/adjustment.scss';
+@import 'block/first.scss';

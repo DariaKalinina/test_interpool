@@ -7,15 +7,15 @@ html, body{
 }
 
 html{
-  font-size: rem(14px);
+  font-size: 14px;
 }
 
 body {
   margin: 0;
-  font-size: rem(14px);
+  font-size: 14px;
   background-color: $white;
   font-family: Arial, sans-serif;
-  line-height: 1.42;
+  //line-height: 1.42;
 }
 
 //стили для внешнего и внутреннего контейнера
@@ -26,9 +26,12 @@ body {
   position: relative;
 }
 
-
-
-
+.container{
+  display: flex;
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+}
 
 //------------стили для тегов------------
 ul{

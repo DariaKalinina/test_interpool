@@ -41,7 +41,7 @@ function styles() {
 }
 
 function scripts() {
-  return gulp.src(paths.src + 'js/*.js')
+  return gulp.src(paths.src + '**/*.js')
     .pipe(plumber())
     .pipe(babel({
       presets: ['env']
@@ -53,7 +53,7 @@ function scripts() {
 
 function pugs() {
   let locals = require('./src/data/info.json');
-  return gulp.src(paths.src + '*.pug')
+  return gulp.src(paths.src + '**.pug')
     .pipe(pug({
       locals : locals,
       pretty: true
@@ -62,7 +62,7 @@ function pugs() {
 }
 
 function moveImg() {
-  return gulp.src(paths.src + 'img/*.*')
+  return gulp.src(paths.src + '**/*.{png,jpg}')
     .pipe(gulp.dest(paths.build + 'img/'));
 }
 
@@ -71,11 +71,11 @@ function clean() {
 }
 
 function watch() {
-  gulp.watch(paths.src + 'scss/**/*.scss', styles);
-  gulp.watch(paths.src + 'js/*.js', scripts);
+  gulp.watch(paths.src + '**/**/*.scss', styles);
+  gulp.watch(paths.src + '**/*.js', scripts);
   gulp.watch(paths.src + '**/*.pug', pugs);
   gulp.watch(paths.src + '**/*.json', pugs);
-  gulp.watch(paths.src + 'img/*.*', moveImg);
+  gulp.watch(paths.src + '**/*.{png,jpg}', moveImg);
 }
 
 function serve() {

@@ -5,5 +5,5 @@ $white: #fff;
 @import 'mixins/mixin.scss';
 
 //block
-@import 'block/adjustment.scss';
-@import 'block/first.scss';
+@import 'all/adjustment.scss';
+@import '../block/content/content.scss';

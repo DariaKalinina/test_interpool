@@ -1,4 +1,48 @@
 .content{
-  width: 1000px;
+  display: block;
+  min-width: 500px;
+  max-width: 1000px;
   height: 240px;
+}
+
+.content__list{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.content__item{
+  width: calc(100% / 4);
+  transition: width 1s;
+  overflow-y: hidden;
+  border: 1px solid red;
+
+    // &--1{
+    //   background: url('../img/block/content/img1.jpg') center center no-repeat;
+    //   background-size: cover;
+    // }
+    // &--2{
+    //   background: url('../img/block/content/img2.jpg') center center no-repeat;
+    //   background-size: cover;
+    // }
+    // &--3{
+    //   background: url('../img/block/content/img3.jpg') left center no-repeat;
+    //   background-size: cover
+    // }
+    &:hover{
+      width: calc(100% / 2);
+    }
+}
+
+.content__logo{
+  display: block;
+  width: auto;
+  height: 150px;
+  background: url('../img/block/content/fanatic-logo.png') center center no-repeat;
+  background-size: contain;
+}
+
+.content__img{
+  width: auto;
+  height: 100%;
 }

@@ -15,23 +15,8 @@ body {
   font-size: 14px;
   background-color: $white;
   font-family: Arial, sans-serif;
-  //line-height: 1.42;
 }
 
-//стили для внешнего и внутреннего контейнера
-.wrapper{
-  min-height: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.container{
-  display: flex;
-  width: 1240px;
-  margin: 0 auto;
-  position: relative;
-}
 
 //------------стили для тегов------------
 ul{

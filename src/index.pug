@@ -2,9 +2,8 @@ extends templates/template.pug
 include block/content/content.pug
 
 block content
-  //внешний контайнер
-  .wrapper
-    +content
+  //блок с объявлениями
+  +content
             
 block scripts
   script(src='js/script.min.js')

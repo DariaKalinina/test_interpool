@@ -2,17 +2,23 @@
 mixin content
   .content
     ul.content__list
-      li.content__item
-        a.content__logo(href="#")
-        a.content__description(href="#") 
-          .content__caption Купи доску!!! Ну купи!!
-          .content__text Доска клевая! Честное слово! Благодарить потом будешь!
-      li.content__item.content__item--1
-        a.content__description(href="#") 
-          .content__caption Купи доску!!! Ну купи!!
-          .content__text Доска клевая! Честное слово! Благодарить потом будешь!
-      li.content__item.content__item--2
-        a.content__description(href="#") 
-          .content__caption Купи доску!!! Ну купи!!
-          .content__text Доска клевая! Честное слово! Благодарить потом будешь!
-      li.content__item.content__item--3
+      li.content__item(data-number="1")
+        a.content__link(href="#") 
+          img.content__img.content__img--logo(src="../img/block/content/fanatic-logo.jpg" alt="fanatic-logo")
+          a.content__description(href="#") 
+            .content__caption Fanatic Gecko
+      li.content__item(data-number="2")
+        a.content__link(href="#") 
+          img.content__img(src="../img/block/content/img1.jpg" alt="fanatic")
+          a.content__description(href="#") 
+            .content__caption Fanatic Gecko
+            .content__text The Gecko is the most user-friendly and fun Freerideboard we’ve ever had in the lineup.
+      li.content__item(data-number="3")
+        a.content__link(href="#") 
+          img.content__img(src="../img/block/content/img2.jpg" alt="fanatic")
+          a.content__description(href="#") 
+            .content__caption Fanatic Gecko
+            .content__text The Gecko is the most user-friendly and fun Freerideboard we’ve ever had in the lineup.
+      li.content__item(data-number="4")
+        a.content__link(href="#") 
+          img.content__img(src="../img/block/content/img3.jpg" alt="fanatic")

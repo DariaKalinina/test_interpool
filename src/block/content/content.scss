@@ -3,56 +3,46 @@
   min-width: 500px;
   max-width: 1000px;
   height: 240px;
+  overflow: hidden;
+  border: 2px solid $grey;
 }
 
 .content__list{
-  display: flex;
-  width: 100%;
+  position: relative;
   height: 100%;
 }
 
-// в "width: calc(100% / 4);" 4 - это количество слайдов
 .content__item{
-  position: relative;
-  width: calc(100% / 4);
-  
-  transition: width 1s;
+  display: inline-block;
+  position: absolute;
+  transition: left 1s;
+  height: 100%;
   overflow: hidden;
     &:hover{
-      width: 60%;
       .content__description{
-        left: 5%;
+        left: 6%;
       }
     }
-    &--1{
-      background: url('../img/block/content/img1.jpg') center center no-repeat;
-      background-size: cover;
-    }
-    &--2{
-      background: url('../img/block/content/img2.jpg') center center no-repeat;
-      background-size: cover;
-    }
-    &--3{
-      background: url('../img/block/content/img3.jpg') center center no-repeat;
-      background-size: cover;
-    }
-
 }
 
-.content__logo{
+.content__link{
   display: block;
-  width: auto;
-  height: 150px;
-  background: url('../img/block/content/fanatic-logo.png') center center no-repeat;
-  background-size: contain;
+  height: 100%;
+}
+
+.content__img{
+  height: 100%;
+    &--logo{
+      height: auto;
+    }
 }
 
 .content__description{
   display: block;
   position: absolute;
   top: 65%;
-  left: 150%;
-  transition: left 1s;
+  left: 900%;
+  transition: left 0.6s;
   width: 95%;
   height: 30%;
   padding: 10px;
